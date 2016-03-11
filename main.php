@@ -1,6 +1,6 @@
 <?php
 
-$config = json_decode(file_get_contents('/data/config.json'));
+$config = json_decode(file_get_contents('/data/config.json'), true);
 
 $fhIn = fopen('/data/in/tables/source.csv', 'r');
 $fhOut = fopen('/data/out/tables/destination.csv', 'w');
