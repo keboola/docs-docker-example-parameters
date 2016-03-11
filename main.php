@@ -16,6 +16,10 @@ while ($row = fgetcsv($fhIn)) {
 
 fclose($fhIn);
 fclose($fhOut);
-echo "All done";
 
-print_r($_ENV);
+echo "All done\n\nEnvironment variables:\n";
+
+echo "KBC_RUNID: " . getenv('KBC_RUNID') . "\n";
+echo "KBC_PROJECTID: " . getenv('KBC_PROJECTID') . "\n";
+echo "KBC_DATADIR: " . getenv('KBC_DATADIR') . "\n";
+echo "KBC_CONFIGID: " . getenv('KBC_CONFIGID') . "\n";
